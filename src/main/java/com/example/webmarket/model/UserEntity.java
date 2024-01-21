@@ -1,4 +1,4 @@
-package com.example.webmarket.models;
+package com.example.webmarket.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,16 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Post {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String title,anons,fullText;
-    private Integer views;
-
-    public Post(String title, String anons, String fullText) {
-        this.title = title;
-        this.anons = anons;
-        this.fullText = fullText;
-    }
+    private String username;
+    private String email;
+    private String subject;
+    private String message;
 }
