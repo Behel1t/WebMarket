@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SearchDTO {
+public class SearchDto {
     private ClotesType type;
 }

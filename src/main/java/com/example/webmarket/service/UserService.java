@@ -1,17 +1,18 @@
 package com.example.webmarket.service;
 
-import com.example.webmarket.Dto.SearchDTO;
-import com.example.webmarket.Dto.UserDTO;
+import com.example.webmarket.Dto.SearchDto;
+import com.example.webmarket.Dto.UserDto;
 
 import java.util.List;
 
 public interface UserService {
-    List<UserDTO>findAll();
-    UserDTO find(Integer id);
-    UserDTO update(Integer id,UserDTO dto);
-    UserDTO save(UserDTO dto);
+    List<UserDto>findAll();
+    UserDto find(Integer id);
+    UserDto update(Integer id, UserDto dto);
+    UserDto save(UserDto dto);
     void delete(Integer id);
-    UserDTO buy(Integer id);
-    List<UserDTO>find(SearchDTO dto);
+    List<UserDto>find(SearchDto dto);
+    UserDto findByName(String username);
 
+    UserDto findByUsername(String username);
 }

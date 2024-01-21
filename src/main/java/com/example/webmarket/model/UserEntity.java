@@ -16,6 +16,7 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private ClotesType type;
     private String username;
     private String email;
     private String subject;
