@@ -1,4 +1,4 @@
-package com.example.webmarket.exc;
+package com.example.webmarket.security.exc;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

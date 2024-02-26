@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset=" 'application/x-www-form-urlencoded;charset=UTF-8'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <title>Title</title>
     <link rel="stylesheet" href="../static/css/style.css" />
     <link rel="stylesheet" href="../static/css/mdb.min.css" />
@@ -15,9 +18,9 @@
 <body>
 <!-- Start your project here-->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+    <nav class="navbar navbar-expand-lg  fixed-top scrolling-navbar bg-body-secondary bg-opacity-75">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">Navbar</a>
+            <a href="/" class="navbar-brand">WebStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,25 +33,23 @@
                         <a href="#best-features" class="nav-link waves-effect waves-light">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#examples" class="nav-link waves-effect waves-light">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#gallery" class="nav-link waves-effect waves-light">News</a>
+                        <a href="#examples" class="nav-link waves-effect waves-light">Clothes</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link waves-effect waves-light">Support</a>
                     </li>
                 </ul>
-                    <ul class="navbar-nav nav-flex-icons ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#"><i class="fa-solid fa-user"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Регистрация</a></li>
-                                        <li><a class="dropdown-item" href="#">Авторизация</a></li>
-                                    </ul>
-                                </a>
-                            </li>
-                    </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa-solid fa-user"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  th:href="@{/login}" >Login </a></li>
+                            <li><a class="dropdown-item"  th:href="@{/register}" >Sign Up</a></li>
+                        </ul>
+                    </li><li class="nav-item">
+                    <a  class="nav-link waves-effect waves-light"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -57,12 +58,11 @@
             <div class="container-fluid d-flex align-items-center justify-content-center h-100">
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-md-10">
-                        <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">
-                            First material bootstrap
+                        <h2 class="display-4 font-weight-bold dark-text pt-5 mb-2">
+                            Welcome to WebStore
                         </h2>
                         <hr class="hr-light">
-                        <h4 class="white-text my-4">World's most popular framework for building responsive,mobile-first websites and apps</h4>
-                        <button class="btn btn-outline-white waves-effect waves-light">Read More <i class="fa fa-book"></i></button>
+                        <h4 class="white-text my-4">Thank you for choosing us</h4>
                     </div>
                 </div>
             </div>
@@ -73,72 +73,80 @@
 <main class="mt-5">
     <div class="container">
         <section id="best-features" class="text-center">
-            <h2 class="mb-5 font-weight-bold">Best Features</h2>
+            <h2 class="mb-5 font-weight-bold">We are in</h2>
             <div class="row d-flex justify-content-center mb-4">
                 <div class="col md-8">
                     <p class="grey-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        A doloremque enim hic molestias natus, necessitatibus perspiciatis quia ratione suscipit voluptas.
+                        subscribe and don’t miss discounts, new clothes, gifts and much more
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
+                    <a href="https://www.tiktok.com/">
                     <i class="fa-brands fa-tiktok fa-4x grey-text"></i>
-                    <h4 class="my-4 font-weight-bold">Archive</h4>
-                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum fugiat magni maiores odit rerum suscipit?</p>
+                        <h4 class="my-4 font-weight-bold">TikTok</h4>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-5">
+                    <a href="https://www.instagram.com/">
                     <i class="fa-brands fa-instagram fa-4x grey-text"></i>
-                    <h4 class="my-4 font-weight-bold">Archive</h4>
-                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum fugiat magni maiores odit rerum suscipit?</p>
+                    <h4 class="my-4 font-weight-bold">instagram</h4>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-5">
+                    <a href="https://web.telegram.org/k/">
                     <i class="fa-brands fa-telegram fa-4x grey-text"></i>
-                    <h4 class="my-4 font-weight-bold">Archive</h4>
-                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum fugiat magni maiores odit rerum suscipit?</p>
+                    <h4  class="my-4 font-weight-bold">telegram</h4>
+                    </a>
                 </div>
             </div>
         </section>
         <hr class="my-5">
         <section id="examples" class="text-center">
-            <h2 class="mb-5 font-weight-bold">Examples</h2>
+            <h2 class="mb-5 font-weight-bold">Сlothes</h2>
             <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4">
+                <div class="col-lg-4 col-md-12 mb-4 ">
                     <div class="hover-text-one">
-                        <figure class="effect-text-two">
+                        <a href="/hodies">
+                        <figure class="effect-text-two" >
                             <img src="https://ae04.alicdn.com/kf/H7a3aa6bb1bd442548cd7bb99353805e9i.jpg" alt="" class="img-fluid"/>
                             <figcaption>
-                                <h3> <span>hoodies</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <h3> <span >hoodies</span></h3>
+                                <p>click here</p>
                             </figcaption>
                         </figure>
+                        </a>
                     <h4 class="my-4 font-weight-bold">Heading</h4>
                     <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque nihil quisquam?</p>
                 </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="hover-text-one">
+                        <a href="/tshirts">
                         <figure class="effect-text-two">
                             <img src="https://i.pinimg.com/originals/11/8c/d7/118cd79324b9802ef0aeaf51793ca16b.jpg" alt="" class="img-fluid"/>
                             <figcaption>
                                 <h3> <span>T-shirts</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p>click here</p>
                             </figcaption>
                         </figure>
+                        </a>
                         <h4 class="my-4 font-weight-bold">Heading</h4>
                         <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque nihil quisquam?</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="hover-text-one">
+                        <a href="/pants">
                         <figure class="effect-text-two">
                             <img src="https://yandex-images.clstorage.net/4w8Iu2v23/109398_oVF/klYtkjYejBzk8ZVqiw9qAun35-y4ybYYbYY-ZPMZvISR29OHMvj4UQeOgq51Bs_saNeuEcH-3lmrnGJmPvyeFNcDbMR3QMsc4eXeYMcVZhL8u_qvotvuFFu9QhCDJ8u37Kz8-3-prgRTlZn9O2uh-CbEhQOU470WruI2QzGp8mu0ZR25CB_aEPXE3mu8BGAU47HawZS_kmNMqloiqBbwp-qB_NdjvZABbKPvxTV4sLA3yJsOltSEK7DGPXI2kMdyt3U3pSc9wDnW09l3vSJPNtKg4N-1srBWfINiGKw_x5PXqPnCdYG0DV2m3cgnWpuTOfaEEKfYox6FyyhwJYPhQqhNEYIQGMo7zMTTR5kjfwz6jcDhh6SmVm-xTDOQKtWEyKHS2W-JuDZlq-bJBH24vhTboQSl6JwopN8TUyKC-FWHQSmeACjKCNTV03-hD3ofw6jAxaipmFRRh2Uepz70i-C5-sBOvaUNT7fd1zZ-ioox8o0GuM2gIqfsAlE3oOlogmUflzUL2jTL2894kxZLJtWtysidpIxlaJZXOZQ8753DhOfBbLu2B1eBwPwaXZq7Cfa0GLvejySnxhFqKrbyaLZ0KLkIPcgV9uj-SrMrRhTUquDCgr-4dEiAShWlEcWr9qzG3UuKsAN7hsHwDEGZnCrkpRW4y6gFk9kRdzG1x3GHQByKCQrlK9Tm6FGCAmEO_4j654iInldLqkgWtjXGrdK94vleoLUNRZna7AdYr6AS56MxscGqF7rNKGsYnf5vp1oQnQcA9wH10d9FuzVsFeO25uiNqJ5DRqFuGawp_I3VrvTxVaWhKneB2fUmdoyXNuiBAZ3ZrDmmxil6G4PGT75SCoMvB8oU49X0RKsZWx7kmOHknqyRT1aqeTCRE--d77LsxEWsjThbj__vM1CurBrkoTqVwrsHnfEXUxq9-EqTRRGGJh3yH_jYwUqNA20K8q_G5ZqLiWVds1QWrDw" alt="" class="img-fluid"/>
                             <figcaption>
                                 <h3> <span>pants</span></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p>click here</p>
                             </figcaption>
                         </figure>
+                        </a>
                         <h4 class="my-4 font-weight-bold">Heading</h4>
                         <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eaque nihil quisquam?</p>
                     </div>
@@ -151,29 +159,29 @@
             <h2 class="mb-0 font-weight-bold text-center">Contact us</h2>
             <div class="row">
                 <div class="col-lg-5 col-md-12">
-                    <form  class="p-5">
+                    <form  class="myForm">
                         <div class="md-form form-sm">
                             <i class="fa fa-user prefix grey-text"></i>
-                            <input type="text" id="form3" class="form-control form-control-sm" PLACEHOLDER="Your name">
-                            <label for="form3" ></label>
+                            <input type="text" id="username" class="form-control form-control-sm"   name="username"  PLACEHOLDER="Your name">
+                            <label for="username"></label>
                         </div>
                         <div class="md-form form-sm">
                             <i class="fa fa-envelope prefix grey-text"></i>
-                            <input type="text"  id="form2" class="form-control form-control-sm" PLACEHOLDER="Your email">
-                            <label for="form2" ></label>
+                            <input type="email"  id="email" class="form-control form-control-sm" name="email"  PLACEHOLDER="Your email">
+                            <label for="email" ></label>
                         </div>
                         <div class="md-form form-sm">
                             <i class="fa fa-tag prefix grey-text"></i>
-                            <input type="text" id="form1" class="form-control form-control-sm" PLACEHOLDER="Subject">
-                            <label for="form1" ></label>
+                            <input type="text" id="subject" class="form-control form-control-sm"   name="subject" PLACEHOLDER="Subject">
+                            <label for="subject" ></label>
                         </div>
                         <div class="md-form form-sm">
                             <i class="fa fa-pencil prefix grey-text"></i>
-                            <textarea type="text" id="form0" class="md-textarea form-control form-control-sm" PLACEHOLDER="Your message" rows="4"></textarea>
+                            <textarea type="text" id="form0" class="md-textarea form-control form-control-sm"  name="text" PLACEHOLDER="Your message" rows="4"></textarea>
                             <label for="form0" ></label>
                         </div>
                         <div class="text-center mt-4"></div>
-                            <button class="btn btn-primary waves-effect waves-light">Send</button>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Send</button>
                     </form>
                 </div>
                 <div class="col-lg-7 col-md-12">
@@ -235,7 +243,6 @@
             <p><a href="#"></a>MDBootstrap</p>
             <p><a href="#"></a>MDBootstrap</p>
         </div>
-
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold"><strong>Links</strong></h6>
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
@@ -249,10 +256,10 @@
             <p><i class="fa fa-home mr-3"></i>London</p>
             <p><i class="fa fa-envelope mr-3"></i>info@gmail.com</p>
             <p><i class="fa fa-phone mr-3"></i>+380 142 12 12</p>
-
         </div>
     </div>
 </div>
+
 
 <!-- MDB -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">

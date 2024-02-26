@@ -1,10 +1,11 @@
-package com.example.webmarket.exc;
+package com.example.webmarket.security.exc;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+
 public class StoreFailedException extends RuntimeException {
     private final String errorMessage;
 
