@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset=" 'application/x-www-form-urlencoded;charset=UTF-8'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="/scss/_base.scss" />
+    <link rel="stylesheet" href="/scss/_card.scss" />
+    <link rel="stylesheet" href="/scss/_cart.scss" />
+    <link rel="stylesheet" href="/scss/_fonts.scss" />
+    <link rel="stylesheet" href="/scss/_popup.scss" />
+    <link rel="stylesheet" href="/scss/_product.scss" />
+    <link rel="stylesheet" href="/scss/_reset.scss" />
+    <link rel="stylesheet" href="/scss/_base.scss" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="../static/css/clothes.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/mdb.min.css" />
+    <link rel="stylesheet" href="../static/css/mdb.rtl.min.css" />
+    <script src="https://kit.fontawesome.com/93ebb130d4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">WebStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu ">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link waves-effect waves-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/#best-features" class="nav-link waves-effect waves-light">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/#examples" class="nav-link waves-effect waves-light">Clothes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/#contact" class="nav-link waves-effect waves-light">Support</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa-solid fa-user"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  th:href="@{/login}" >Login </a></li>
+                            <li><a class="dropdown-item"  th:href="@{/register}" >Sign Up</a></li>
+                        </ul>
+                    </li><li class="nav-item">
+                    <a href="shop_cart" class="nav-link waves-effect waves-light"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="product">
+        <div class="product__info">
+            <div class="container">
+                <h1 class="product__title">Каталог</h1>
+                <h1 class="product__title product__title--gray">3 товара</h1>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card__top">
+                    <a href="#" class="card__image">
+                        <img
+                                src="../static/img/tshirts1.webp"
+                                alt="OVERSIZED LONGSLEEVE «IMMORTAL»"
+                        />
+                    </a>
+                    <div class="card__label">-50%</div>
+                </div>
+                <div class="card__bottom">
+                    <div class="card__prices">
+                        <div class="card__price card__price--discount">5000</div>
+                        <div class="card__price card__price--common">10000</div>
+                    </div>
+                    <a href="#" class="card__title">
+                        OVERSIZED LONGSLEEVE «IMMORTAL»
+                    </a>
+                    <button class="card__add">В корзину</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__top">
+                    <a href="#" class="card__image">
+                        <img
+                                src="../static/img/thirt3.webp"
+                                alt="OVERSIZED T-SHIRT “2B”"
+                        />
+                    </a>
+                    <div class="card__label">-50%</div>
+                </div>
+                <div class="card__bottom">
+                    <div class="card__prices">
+                        <div class="card__price card__price--discount">5500</div>
+                        <div class="card__price card__price--common">11000</div>
+                    </div>
+                    <a href="#" class="card__title">
+                        OVERSIZED T-SHIRT “2B”
+                    </a>
+                    <button class="card__add">В корзину</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__top">
+                    <a href="#" class="card__image">
+                        <img
+                                src="../static/img/tshirt2.webp"
+                                alt="T-SHIRT «KURAPIKA»"
+                        />
+                    </a>
+                    <div class="card__label">-60%</div>
+                </div>
+                <div class="card__bottom">
+                    <div class="card__prices">
+                        <div class="card__price card__price--discount" >4000</div>
+                        <div class="card__price card__price--common">10000</div>
+                    </div>
+                    <a href="#" class="card__title">
+                        T-SHIRT «KURAPIKA»
+                    </a>
+                    <button class="card__add">В корзину</button>
+                </div>
+            </div>
+        </div>>
+    </section>
+    <button class="cart" id="cart">
+        <img class="cart__image" src="../static/img/cart.png" alt="Cart" srcset="" />
+        <div class="cart__num" id="cart_num">0</div>
+    </button>
+    <div class="popup" href="shop_cart">
+        <div class="popup__container" id="popup_container">
+            <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+            </div>
+            <div class="popup__item" id="popup_product_list">
+                <div class="popup__product">
+                    <div class="popup__product-wrap">
+                        <img
+                                src="./images/iphone-14-pro-max-gold.png"
+                                alt="Apple IPhone 14 Pro Max 256Gb"
+                                class="popup__product-image"
+                        />
+                        <h2 class="popup__product-title">
+                            Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                        </h2>
+                    </div>
+                    <div class="popup__product-wrap">
+                        <div class="popup__product-price">135000</div>
+                        <button class="popup__product-delete">&#10006;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__item">
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Итого</h2>
+                    <output class="popup__cost-value" id="popup_cost">0</output>
+                </div>
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Скидка</h2>
+                    <output class="popup__cost-value" id="popup_discount">0</output>
+                </div>
+                <div class="popup__cost">
+                    <h2 class="popup__cost-title">Итого со скидкой</h2>
+                    <output class="popup__cost-value" id="popup_cost_discount"
+                    >0</output
+                    >
+                </div>
+            </div>
+            <button class="popup__close" id="popup_close">&#10006;</button>
+        </div>
+    </div>
+    <footer id="contact" class="page-footer font-small pt-0">
+        <div class="primary-color">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <a href="#" class="fb-ic ml-0">
+                            <i class="fa fa-telegram white-text mr-4"></i>
+                        </a>
+                        <a href="#" class="fb-ic ml-0">
+                            <i class="fa fa-instagram white-text mr-4"></i>
+                        </a>
+                        <a href="#" class="fb-ic ml-0">
+                            <i class="fa-brands fa-tiktok white-text mr-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="page-container mt-0 mb-4 text-center  text-md-left ">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                <h6 class="text-uppercase font-weight-bold"><strong>Our company</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem hic velit?</p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold"><strong>Products</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><a href="#"></a>MDBootstrap</p>
+                <p><a href="#"></a>MDBootstrap</p>
+                <p><a href="#"></a>MDBootstrap</p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold"><strong>Links</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><a href="#"></a>Account</p>
+                <p><a href="#"></a>Help</p>
+                <p><a href="#"></a>MDBootstrap</p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 ">
+                <h6 class="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><i class="fa fa-home mr-3"></i>London</p>
+                <p><i class="fa fa-envelope mr-3"></i>info@gmail.com</p>
+                <p><i class="fa fa-phone mr-3"></i>+380 142 12 12</p>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="../static/js/main.js"></script>
+
+<!-- MDB -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    <!-- Custom scripts -->
+</script>
+</body>
+</html>

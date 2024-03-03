@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,7 +15,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class SpringSecurity {
+public class SpringSecurity  {
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -29,9 +30,11 @@ public class SpringSecurity {
         http
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**","/static/**").permitAll()
-                                .requestMatchers("/").permitAll()
-                                .requestMatchers("/addP").hasRole("ADMIN")
+                                .requestMatchers("/","/index","/add").permitAll()
                                 .anyRequest().authenticated()
+                                
+
+
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
@@ -53,5 +56,6 @@ public class SpringSecurity {
         auth
                 .userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
+
     }
 }

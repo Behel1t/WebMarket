@@ -3,6 +3,7 @@ package com.example.webmarket.security.service;
 import com.example.webmarket.security.entity.Role;
 import com.example.webmarket.security.entity.User;
 import com.example.webmarket.security.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
+    @Autowired
     private UserRepository userRepository;
 
     public CustomUserDetailsService(UserRepository userRepository) {

@@ -2,18 +2,74 @@
 @import "static/css/mdb.min.css";
 html,body,header,#intro{
     height: 100%;
-    background-color: rgba(54, 48, 15, 0.29);
+    background-color: rgba(145, 124, 41, 0.52);
+}
+
+    .navbar-light.navbar-nav.nav-link{
+    color: rgba(0, 0, 0, 0.77);
+    font-weight: 500;
+    text-transform:uppercase;
+}
+
+.navbar-nav .dropdown-menu{
+    right: 0;
+    left: auto;
+}
+
+.top-menu li a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #111;
+    height: 1px;
+    transition: all 0.3s;
+    transform: scale(0);
+}
+.top-menu li a:hover::after{
+    transform: scale(1);
+}
+.modal-body img{
+    max-width: 100px;
+}
+.carousel-content {
+    position: absolute;
+    bottom: 5%;
+    left: 38%;
+    z-index: 100;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.58);
+}
+.carousel-content1 {
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    z-index: 50;
+    color: #7a7a7a;
+    text-shadow: 2px 2px 4px rgba(1,1,1,1.6);
+}
+.my-carousel{
+    padding: 0;
+}
+.my-carousel.carousel-item{
+    display: flex;
+    max-height: 50px;
+}
+.carousel-item.carousel-item img{
+    object-fit: cover;
 }
 #intro{
 
-    background: url(../img/34.gif) no-repeat center center fixed;
+    background: url(../img/11.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
 @media screen {
    .navbar:not(.top-menu){
-       background-color: rgba(0, 0, 0, 0.56);
+       background-color: rgba(143, 143, 143, 0.56);
    }
+}
+.img-fluid{
+    height: max-content;
 }
 
 

@@ -1,0 +1,67 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+<!--      xmlns:th="http://www.thymeleaf.org"-->
+<!--&gt;-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Products</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"-->
+<!--          crossorigin="anonymous">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="col-12">-->
+<!--    <h3 class="text-center">Add a products</h3>-->
+<!--    <hr>-->
+<!--    <ul class="list-inline">-->
+<!--        <li class="list-inline-item"><a href="/addProduct">Add Product</a></li>-->
+<!--        <li class="list-inline-item"><a href="/listProduct">List of Products</a></li>-->
+<!--    </ul>-->
+<!--    <div class="col-6">-->
+<!--        <form th:method="POST" role="form" th:action="@{/addProduct}"  th:object="${product}" enctype="multipart/form-data">-->
+<!--            <div class="form-group mb-3">-->
+<!--                <label class="form-label">Product Name</label>-->
+<!--                <input class="form-control"-->
+<!--                       id="name"-->
+<!--                       name="name"-->
+<!--                       placeholder="Enter product name"-->
+<!--                       th:field="*{name}"-->
+<!--                       type="text"-->
+<!--                />-->
+<!--            </div>-->
+<!--            <div class="form-group mb-3">-->
+<!--                <label class="form-label">Product Price</label>-->
+<!--                <input class="form-control"-->
+<!--                       id="price"-->
+<!--                       name="price"-->
+<!--                       placeholder="Enter product price"-->
+<!--                       th:field="*{price}"-->
+<!--                       type="number"-->
+<!--                />-->
+<!--            </div>-->
+<!--            <div class="form-group mb-3">-->
+<!--                <label class="form-label">Product Amount</label>-->
+<!--                <input class="form-control"-->
+<!--                       id="amount"-->
+<!--                       name="amount"-->
+<!--                       placeholder="Enter product amount"-->
+<!--                       th:field="*{amount}"-->
+<!--                       type="number"-->
+<!--                />-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="exampleFormControlFile1">Image input</label>-->
+<!--                <br>-->
+<!--                <input type="file" name="file" th:field="*{image}" class="form-control-file" id="exampleFormControlFile1" enctype="multipart/form-data">-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="form-group mb-3">-->
+<!--                <button class="btn btn-primary" type="submit">Submit</button>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

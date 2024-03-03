@@ -4,6 +4,7 @@ import com.example.webmarket.security.dto.UserDto;
 import com.example.webmarket.security.entity.User;
 import com.example.webmarket.security.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @Controller
 public class AuthController {
-
+    @Autowired
     private UserService userService;
 
     public AuthController(UserService userService) {
@@ -78,4 +79,5 @@ public class AuthController {
         model.addAttribute("users", users);
         return "users";
     }
+
 }
